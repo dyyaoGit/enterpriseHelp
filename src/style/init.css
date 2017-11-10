@@ -28,3 +28,10 @@ a:hover,a:active{
     visibility: hidden;
     line-height:0;
 }
+
+/**@style
+    全局常用类名
+*/
+.section {
+    width: 1226px;
+}
