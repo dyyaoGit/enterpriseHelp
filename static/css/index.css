@@ -1,0 +1,79 @@
+/*初始化样式*/
+*{
+    padding: 0;
+    margin: 0;
+}
+body,.container{
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    color: #333;
+    background-color: #fff;
+    min-width: 1226px;
+}
+ul {
+    list-style: none;
+}
+a:link,a:visited{
+    color: #999;
+    text-decoration: none;
+}
+a:hover,a:active{
+    color: #31a5e7;
+    text-decoration: none;
+}
+.clear_fixed{
+    zoom: 1;
+}
+.clear_fixed::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    visibility: hidden;
+    line-height:0;
+}
+/*初始化样式结束*/
+
+/*顶部header栏目样式开始*/
+.header-wrapper{
+    background-color: #333;
+    color: #b0b0b0;
+}
+.header a{
+    color: #b0b0b0;
+}
+.header{
+    width: 1226px;
+    margin: 0 auto;
+}
+.header-item{
+    float: left;
+}
+.header-item>div{
+    float: left;
+    padding: 8px;
+}
+
+
+.header-item1{
+    float: right;
+}
+.header-item1>ul>li{
+    float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
