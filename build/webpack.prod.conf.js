@@ -35,7 +35,7 @@ const webpackConfig = merge(baseWebpackConfig, {
             // Absolute path to compiled SPA
             path.join(__dirname, '../dist'),
             // List of routes to prerender
-            ['/index']
+            ['/index','/register','/fiscalAgent','/TMservices']
         ),
         // UglifyJs do not support ES6+, you can also use babel-minify for better treeshaking: https://github.com/babel/minify
         new webpack.optimize.UglifyJsPlugin({

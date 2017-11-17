@@ -4,11 +4,11 @@
             <img src="../../../static/images/logo.png" alt="logo">
         </h1>
         <ul class="clear-fixed nav-items">
-            <li class="main-link" :class="{active: $route.path === '/index'}"><router-link to="/index">首页</router-link></li>
-            <li class="main-link" :class="{active: $route.path === ''}"><router-link to="#">公司注册</router-link></li>
-            <li class="main-link" :class="{active: $route.path === ''}"><router-link to="#">财务代理</router-link></li>
-            <li class="main-link" :class="{active: $route.path === ''}"><router-link to="#">商标服务</router-link></li>
-            <li class="main-link" :class="{active: $route.path === ''}"><router-link to="#">法律服务</router-link></li>
+            <li class="main-link" :class="{active: $route.name === '首页'}"><router-link to="/index">首页</router-link></li>
+            <li class="main-link" :class="{active: $route.name === '公司注册'}"><router-link to="/register">公司注册</router-link></li>
+            <li class="main-link" :class="{active: $route.name === '财务代理'}"><router-link to="/fiscalAgent">财务代理</router-link></li>
+            <li class="main-link" :class="{active: $route.name === '商标服务'}"><router-link to="/TMservices">商标服务</router-link></li>
+            <li class="main-link" :class="{active: $route.name === '法律服务'}"><router-link to="/legalService">法律服务</router-link></li>
             <li class="main-link" :class="{active: $route.path === ''}"><router-link to="#">创业套餐</router-link></li>
             <li class="main-link" :class="{active: $route.path === ''}"><router-link to="#">帮帮干货</router-link></li>
         </ul>
@@ -22,7 +22,7 @@
             return {}
         },
         mounted() {
-            console.log(this.$route)
+
         }
     }
 </script>
@@ -48,20 +48,26 @@
     .main-link {
         float: left;
     }
+    .main-link a:hover {
+        border-bottom: 2px solid #39f;
+    }
     .nav .active > a {
-        color: orangered !important;
+        color: #39f!important;
+        border-bottom: 2px solid #39f;
     }
 
-    .nav a:link, .nav a:visited {
+
+    .nav a:visited {
         color: #333;
     }
 
     .nav a:hover, .nav a:active {
-        color: orangered;
+        color: #39f;
     }
 
-    .nav .main-link {
-        padding: 16px 8px 0;
+    .nav .main-link>a{
+        padding: 16px 8px;
+        color: #333;
     }
 
     .main-link:last-child {

@@ -6,6 +6,15 @@ import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueAwesomeSwiper)
 import 'swiper/dist/css/swiper.css'
+// import Element from 'element-ui'
+// import 'element-ui/lib/theme-chalk/index.css'
+import iView from 'iview';
+import 'iview/dist/styles/iview.css';    // 使用 CSS
+
+
+Vue.use(iView)
+// Vue.use(Element)
+
 
 
 Vue.config.productionTip = false

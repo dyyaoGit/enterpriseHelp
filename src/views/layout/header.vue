@@ -13,8 +13,8 @@
                     <div class="weixin">
                         <i class="iconfont icon-weixin"></i>
                         <div class="wx-qrcode">
-                            <img src="http://www.itenbo.com/Content/img/index/sprict-msg.jpg" alt="wx">
-                            <div class="wx-desc">
+                            <img src="http://www.itenbo.com/Content/img/index/sprict-msg.jpg" alt="wx" style="display: block">
+                            <div class="wx-desc" style="background: #fff;width: 100px;">
                                 官方微信
                             </div>
                         </div>
