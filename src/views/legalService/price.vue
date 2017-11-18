@@ -4,17 +4,7 @@
             <li class="tab-title"  @click="active = 1" :class="{active: active === 1}">法律服务</li>
         </ul>
         <div class="tab-content">
-            <div class="price-header">
-                <dl class="ori-pri">
-                    <dt>
-                        企帮宝价：
-                    </dt>
-                    <dd>
-                        <span class="computed-price" v-text="computedMoney" v-if="active === 1"></span>
-                    </dd>
-                </dl>
-
-            </div>
+            <com-price>{{computedMoney}}</com-price>
 
             <div class="price-options" v-if="active === 1">
                 <Form :model="formModel" class="pd-20">
@@ -70,7 +60,7 @@
         },
         computed: {
             computedMoney () {
-               return ''
+               return '0.00'
             }
         }
     }

@@ -7,34 +7,7 @@
             <li class="tab-title"  @click="active = 4" :class="{active: active === 4}">核名</li>
         </ul>
         <div class="tab-content">
-            <div class="price-header fixed-box">
-                <div class="ori-pri">
-                    <div class="order-wrap">
-                        <div class="order-num">
-                            <div class="number">
-                                9898人
-                            </div>
-                            <div class="suc">
-                                预定成功
-                            </div>
-                        </div>
-                        <dl class="order-price">
-                           <dt>企帮宝价：</dt>
-                            <dd>{{computedMoney}}</dd>
-                        </dl>
-                    </div>
-                    <div class="btns-wrap">
-                        <div class="btns">
-                            <span class="btn-default buy-button">立即预订</span>
-                            <span class="btn-default ask-button">咨询客服</span>
-                        </div>
-                        <div class="service-protect">
-                            <i class="iconfont icon-zhongqingdianxinicon01"></i>
-                            网上交易保障中心
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <com-price>{{computedMoney}}</com-price>
 
             <div class="price-options" v-if="active === 1">
                 <Form :model="formItem" :label-width="80" class="pd-20" label-position="left">

@@ -10,6 +10,7 @@ import 'swiper/dist/css/swiper.css'
 // import 'element-ui/lib/theme-chalk/index.css'
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';    // 使用 CSS
+import './views/components/global'   //全局组件
 
 
 Vue.use(iView)
