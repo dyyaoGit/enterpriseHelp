@@ -1,8 +1,8 @@
 $main-color: #39f;
 .price-box {
     float: left;
-    margin-top: 15px;
-    width: 730px;
+    width: 1226px;
+    margin-top: 20px;
     border: 1px solid #f1f1f1;
 }
 
@@ -27,7 +27,7 @@ $main-color: #39f;
 }
 
 .price-box .tab-content {
-    border-top: 1px solid $main-color;
+    border-top: 3px solid $main-color;
     box-sizing: border-box;
 }
 

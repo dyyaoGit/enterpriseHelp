@@ -8,9 +8,6 @@
             <price></price>
         </section>
         <descImg></descImg>
-        <!--<section class="tab-bar">-->
-            <!--<tabBar></tabBar>-->
-        <!--</section>-->
     </div>
 </template>
 
@@ -41,7 +38,7 @@
 <style scoped>
     .function-box {
         width: 1226px;
-        margin: 20px auto 0;
+        margin: 0 auto;
     }
 
     .banner img{

@@ -7,9 +7,7 @@
         <section class="function-box clear-fixed">
             <price></price>
         </section>
-        <section class="tab-bar">
-            <tabBar></tabBar>
-        </section>
+        <desc-img></desc-img>
     </div>
 </template>
 

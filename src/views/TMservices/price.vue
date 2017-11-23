@@ -5,20 +5,15 @@
         </ul>
         <div class="tab-content">
             <div class="price-header">
-                <dl class="ori-pri">
-                    <dt>
-                        企帮宝价：
-                    </dt>
-                    <dd>
-                        <span class="computed-price" v-text="computedMoney" v-if="active === 1"></span>
-                    </dd>
-                </dl>
-
+                <com-price>
+                    <span v-text="computedMoney" v-if="active === 1"></span>
+                </com-price>
             </div>
 
             <div class="price-options" v-if="active === 1">
                 <Form :model="formItem" :label-width="80">
-                    <FormItem label="代理类型">
+                    <FormItem>
+                        <span class="title-label"><i class="iconfont icon-mingcheng-copy default-icon bold-icon"></i>代理类型</span>
                         <RadioGroup size="large" type="button" v-model="formItem.type">
                            <Radio label="商标注册">商标注册</Radio>
                            <Radio label="加急商标注册">加急商标注册</Radio>
@@ -27,9 +22,6 @@
                            <Radio label="疑难商标注册">疑难商标注册</Radio>
                         </RadioGroup>
                     </FormItem>
-                    <Button size="large" type="primary" style="margin-left:  20px;">
-                        立即预订
-                    </Button>
                 </Form>
             </div>
         </div>
@@ -109,8 +101,7 @@
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
+    @import '../../style/overwriteIview';
     @import '../../style/price';
-
-
 </style>

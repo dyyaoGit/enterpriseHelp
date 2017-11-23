@@ -11,6 +11,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var PrerenderSpaPlugin = require('prerender-spa-plugin')
 
+
 const env = config.build.env
 
 const webpackConfig = merge(baseWebpackConfig, {
@@ -35,7 +36,7 @@ const webpackConfig = merge(baseWebpackConfig, {
             // Absolute path to compiled SPA
             path.join(__dirname, '../dist'),
             // List of routes to prerender
-            ['/index','/register','/fiscalAgent','/TMservices']
+            ['/index', '/register', '/fiscalAgent', '/TMservices', '/setMeal', '/legalService','/ganhuo']
         ),
         // UglifyJs do not support ES6+, you can also use babel-minify for better treeshaking: https://github.com/babel/minify
         new webpack.optimize.UglifyJsPlugin({

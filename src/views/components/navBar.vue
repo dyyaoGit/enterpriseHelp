@@ -1,7 +1,7 @@
 <template>
     <div class="nav clear-fixed">
         <h1 class="logo">
-            <img src="../../../static/images/logo.png" alt="logo">
+            <img :src="logo" alt="logo">
         </h1>
         <ul class="clear-fixed nav-items">
             <li class="main-link" :class="{active: $route.name === '首页'}"><router-link to="/index">首页</router-link></li>
@@ -9,17 +9,20 @@
             <li class="main-link" :class="{active: $route.name === '财务代理'}"><router-link to="/fiscalAgent">财务代理</router-link></li>
             <li class="main-link" :class="{active: $route.name === '商标服务'}"><router-link to="/TMservices">商标服务</router-link></li>
             <li class="main-link" :class="{active: $route.name === '法律服务'}"><router-link to="/legalService">法律服务</router-link></li>
-            <li class="main-link" :class="{active: $route.path === ''}"><router-link to="#">创业套餐</router-link></li>
-            <li class="main-link" :class="{active: $route.path === ''}"><router-link to="#">帮帮干货</router-link></li>
+            <li class="main-link" :class="{active: $route.name === '创业套餐'}"><router-link to="/setMeal">创业套餐</router-link></li>
+            <li class="main-link" :class="{active: $route.name === '干货文章'}"><router-link to="/ganhuo">帮帮干货</router-link></li>
         </ul>
     </div>
 </template>
 
 <script>
+    import logo from './base64Logo'
     export default {
         name: '',
         data() {
-            return {}
+            return {
+                logo: logo.logo
+            }
         },
         mounted() {
 
@@ -39,6 +42,9 @@
 
     .logo {
         float: left;
+    }
+    .logo img{
+
     }
 
     .nav-items {

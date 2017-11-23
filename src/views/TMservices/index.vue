@@ -4,11 +4,8 @@
         <section class="banner">
             <img src="../../../static/images/TMservicesBanner.png" alt="商标服务">
         </section>
-        <section class="clear-fixed price-wrap">
+        <section class="clear-fixed price-wrap" style="margin-bottom: 200px;">
             <price></price>
-        </section>
-        <section>
-            <tabBar></tabBar>
         </section>
     </div>
 </template>
@@ -16,9 +13,8 @@
 <script>
     import navBar from '../components/navBar.vue'
     import price from './price.vue'
-    import tabBar from '../regCompany/tabBar.vue'
     export default {
-        components: { navBar, price, tabBar },
+        components: { navBar, price },
         name: 'TMservices',
         data() {
             return {}

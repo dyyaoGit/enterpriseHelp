@@ -42,7 +42,7 @@ let router = new Router({
         {
             path: '/fiscalAgent',
             component: layout,
-            children: [{name: '财务代理',path: '',component: resolve => require(['~views/fiscalAgent'], resolve),meta: {title: '代理记账-记账公司'}}]
+            children: [{name: '财务代理', path: '',component: resolve => require(['~views/fiscalAgent'], resolve),meta: {title: '代理记账-记账公司'}}]
         },
         {
             path: '/TMservices',
@@ -53,6 +53,16 @@ let router = new Router({
             path: '/legalService',
             component: layout,
             children: [{name: '法律服务', path: '', component: resolve => require(['~views/legalService'], resolve), meta: {title: '企帮宝-注册公司-法律服务'}}]
+        },
+        {
+            path: '/setMeal',
+            component: layout,
+            children: [{name: '创业套餐', path: '', component: resolve => require(['~views/setMeal'],resolve), meta: {title: '企帮宝-创业套餐-代理记账'}}]
+        },
+        {
+            path: '/ganhuo',
+            component: layout,
+            children: [{name: '干货文章', path: '', component: resolve => require(['~views/ganhuo'],resolve), meta: {title: '企帮宝-干货文章'}}]
         }
     ]
 })

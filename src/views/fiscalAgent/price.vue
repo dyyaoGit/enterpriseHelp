@@ -7,31 +7,26 @@
             <li class="tab-title"  @click="active = 4" :class="{active: active === 4}">社保代理</li>
         </ul>
         <div class="tab-content">
-            <div class="price-header">
-                <dl class="ori-pri">
-                    <dt>
-                        企帮宝价：
-                    </dt>
-                    <dd>
-                        <span class="computed-price" v-text="computedMoney" v-if="active === 1"></span>
-                        <span class="computed-price" v-text="changePrice" v-if="active === 2"></span>
-                        <span class="computed-price" v-text="changeAddress" v-if="active === 3"></span>
-                        <span class="computed-price" v-text="confirmName" v-if="active === 4"></span>
-                    </dd>
-                </dl>
 
-            </div>
+            <com-price>
+                <span v-text="computedMoney" v-if="active === 1"></span>
+                <span v-text="changePrice" v-if="active === 2"></span>
+                <span v-text="changeAddress" v-if="active === 3"></span>
+                <span v-text="confirmName" v-if="active === 4"></span>
+            </com-price>
 
             <div class="price-options" v-if="active === 1">
-                <Form :model="formItem" :label-width="80">
-                    <FormItem label="注册区域">
+                <Form :model="formItem">
+                    <FormItem>
+                        <span class="title-label"><i class="iconfont icon-leixing1 default-icon bold-icon"></i>注册区域</span>
                         <Select v-model="formItem.comRegion" style="width: 300px;">
                             <Option :value="key" v-for="(value,key,index) in formData.regType" :key="index">{{key}}
                             </Option>
                         </Select>
                     </FormItem>
-                    <FormItem label="记账类型">
-                        <RadioGroup size="large">
+                    <FormItem>
+                        <span class="title-label"><i class="iconfont icon-leixing1 default-icon bold-icon"></i>记账类型</span>
+                        <RadioGroup size="large" type="button">
                             <Radio>
                                 小规模记账
                             </Radio>
@@ -40,17 +35,14 @@
                             </Radio>
                         </RadioGroup>
                     </FormItem>
-                    <FormItem label="服务时间">
+                    <FormItem>
+                        <span class="title-label"><i class="iconfont icon-leixing1 default-icon bold-icon"></i>服务时间</span>
                         <RadioGroup v-model="formItem.comAddress" type="button">
                             <Radio :label="formData.comAddress[1]">3个月</Radio>
                             <Radio :label="formData.comAddress[0]">6个月</Radio>
                             <Radio :label="2">12个月</Radio>
                         </RadioGroup>
                     </FormItem>
-
-                    <Button size="large" type="primary" style="margin-left:  20px;">
-                        立即预定
-                    </Button>
                 </Form>
             </div>
             <div class="price-options" v-if="active === 2">
@@ -93,7 +85,7 @@
                 </Form>
             </div>
             <div class="price-options" v-if="active === 3">
-                <Form :model="formItem3" :label-width="80" class="my-form-style">
+                <Form :model="formItem3" class="my-form-style">
                     <FormItem label="注册区域">
                         <Select v-model="formItem3.comRegion" style="width: 300px;">
                             <Option :value="key" v-for="(value,key,index) in formData.comRegion" :key="index">
@@ -120,9 +112,6 @@
                             </Radio>
                         </RadioGroup>
                     </FormItem>
-                    <Button size="large" type="primary" style="margin-left: 10px;">
-                        立即预定
-                    </Button>
                 </Form>
             </div>
             <div class="price-options" v-if="active === 4">
@@ -147,9 +136,7 @@
                             </Radio>
                         </RadioGroup>
                     </FormItem>
-                    <Button size="large" type="primary" style="margin-left: 10px;">
-                        立即预定
-                    </Button>
+
                 </Form>
             </div>
 
@@ -251,7 +238,7 @@
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
+    @import '../../style/overwriteIview';
     @import '../../style/price';
-
 </style>

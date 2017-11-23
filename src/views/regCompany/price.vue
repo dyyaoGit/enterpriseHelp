@@ -10,7 +10,7 @@
             <com-price>{{computedMoney}}</com-price>
 
             <div class="price-options" v-if="active === 1">
-                <Form :model="formItem" :label-width="80" class="pd-20" label-position="left">
+                <Form :model="formItem"  label-position="left">
                     <FormItem>
                         <span class="title-label"><i class="iconfont icon-leixing1 default-icon bold-icon"></i>注册类型</span>
                         <Select v-model="formItem.regType" style="width: 300px;">
@@ -255,7 +255,6 @@
     $main-color: #39f;
     .price-box {
         float: left;
-        margin-top: 15px;
         width: 1226px;
         border: 1px solid #f1f1f1;
     }

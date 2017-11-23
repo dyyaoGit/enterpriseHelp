@@ -8,8 +8,9 @@
 
             <div class="price-options" v-if="active === 1">
                 <Form :model="formModel" class="pd-20">
-                    <FormItem label="服务类型">
-                        <RadioGroup v-model="formModel.serviceType" size="large">
+                    <FormItem>
+                        <span class="title-label"><i class="iconfont icon-mingcheng-copy default-icon bold-icon"></i>服务类型</span>
+                        <RadioGroup v-model="formModel.serviceType" size="large" type="button">
                             <Radio label="1">
                                 合同章程
                             </Radio>
@@ -18,26 +19,25 @@
                             </Radio>
                         </RadioGroup>
                     </FormItem>
-                    <FormItem label="代理类型">
-                        <CheckboxGroup>
-                            <Checkbox>合同撰写</Checkbox>
-                            <Checkbox>合同审核</Checkbox>
-                            <Checkbox>合伙协议</Checkbox>
-                            <Checkbox>股权协议</Checkbox>
-                            <Checkbox>公司章程</Checkbox>
-                        </CheckboxGroup>
+                    <FormItem>
+                        <span class="title-label"><i class="iconfont icon-mingcheng-copy default-icon bold-icon"></i>代理类型</span>
+                        <Select>
+                            <Option value="合同撰写"></Option>
+                            <Option value="合同审核"></Option>
+                            <Option value="合伙协议"></Option>
+                            <Option value="股权协议"></Option>
+                            <Option value="公司章程"></Option>
+                        </Select>
                     </FormItem>
-                    <FormItem label="代理类型">
-                        <CheckboxGroup>
-                            <Checkbox>法律维权</Checkbox>
-                            <Checkbox>律师函</Checkbox>
-                            <Checkbox>法律顾问</Checkbox>
-                            <Checkbox>电话咨询</Checkbox>
-                        </CheckboxGroup>
+                    <FormItem>
+                        <span class="title-label"><i class="iconfont icon-mingcheng-copy default-icon bold-icon"></i>代理类型</span>
+                        <Select>
+                            <Option value="法律维权"></Option>
+                            <Option value="律师函"></Option>
+                            <Option value="法律顾问"></Option>
+                            <Option value="电话咨询"></Option>
+                        </Select>
                     </FormItem>
-                    <Button size="large" type="primary">
-                        立即预定
-                    </Button>
                 </Form>
             </div>
 
@@ -67,7 +67,8 @@
 </script>
 
 
-<style scoped lang="scss">
+<style lang="scss">
     @import '../../style/price';
+    @import '../../style/overwriteIview';
 
 </style>
